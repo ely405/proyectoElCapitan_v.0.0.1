@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>El Capitán</title>
 </head>
 <body>
@@ -14,11 +15,64 @@
     </p>
   </div>
   <div>
-    <h2>Temas</h2>
-    <button type="submit" name="sprint1">Sprint 1</button>
-    <button type="submit" name="sprint2">Sprint 2</button>
-    <button type="submit" name="sprint3">Sprint 3</button>
+    <h3>Temas</h3>
+    <button type="submit" name="sprint1" onclick="printTemas(btSpr1)" id="btSpr1">Sprint 1</button>
+    <button type="submit" name="sprint2" onclick="b2()" id="btSpr2">Sprint 2</button>
+    <button type="submit" name="sprint3" onclick="printTemas(btSpr3)" id="btSpr3">Sprint 3</button>
   </div>
+  <section id="imprime">
+    <div id="sprint2">
+      <h2 id="sprints">Sprint 2: Introducción al desarrollo web y construcción de páginas web</h2>
+      <ol id="temas">
+        <li>Ciclo de vida del desarrollo web y arquitectura y arquitectura básica cliente/Servidor/Configuración del ambiente de trabajo e introducción a git.</li>
+        <li>HTML y Javascript en el navegador</li>
+        <li>Manej de comandos básicos de git en la terminal</li>
+        <li>Pruebas unitarias</li>
+        <li>Git/ Resolución de conflictos/ Branching model</li>
+        <li>DOM</li>
+      </ol>
+      <hr>
+      <h3 id="primQ">¿Cuál es el comando para iniciar un repositorio desde la consola?</h3>
+      <form>
+        <input type="radio" name="pregun 1" value="gitInit." id="a1">
+        <label for="a1" id="respA1">git init.</label>
+        <br>
+        <input type="radio" name="pregun 1" value="gitInit" id="a2">
+        <label for="a2" id="respA2">git init</label>
+        <br>
+        <input type="radio" name="pregun 1" value="gitInitadd" id="a3">
+        <label for="a3" id="respA3">git init add</label>
+        <br>
+      </form>
+      <h3 id="segQ">¿Cuál es la finalidad de hacer una prueba unitarias?</h3>
+      <form id="opciones">
+        <input type="radio" name="pregun 2" value="" id="b1">
+        <label for="b1" id="respB1">Comprobar que el código funciona correctamente</label><br>
+        <input type="radio" name="pregun 2" value="" id="b2">
+        <label for="b2" id="respB2">Darle valores a los parámetros de dichas funciones</label>
+        <br>
+        <input type="radio" name="pregun 2" value="" id="b3">
+        <label for="b3" id="respB3">No tiene ningún fin</label><br>
+      </form>
+
+      <h3 id="terQ">¿Qué significa DOM?</h3>
+      <form>
+        <input type="radio" name="pregun 3" value="" id="c1">
+        <label for="c1" id="respC1">Dual Object Model</label>
+        <br>
+        <input type="radio" name="pregun 3" value="" id="c2">
+        <label for="c2" id="respC2">Document Object Model</label>
+        <br>
+        <input type="radio" name="pregun 3" value="" id="c3">
+        <label for="c3" id="respC3">Document Obsolet Model</label><br>
+      </form>
+    </div>
+
+    <br>
+    <div class="eviar">
+      <button type="submit" name="enviar">Enviar</button>
+    </div>
+  </section>
   <script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 </html>
