@@ -1,11 +1,5 @@
-#sprint1{
-	display : none;
-}
-#sprint3{
-  display : none;
-}
-#sprint2{
-  display: block;
+.hidden {
+	display: none;
 }
 
 .dropbtn {

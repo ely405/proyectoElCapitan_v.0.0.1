@@ -23,12 +23,12 @@
   </div>
   <div>
     <h3>Temas</h3>
-    <button type="submit" name="sprint1" onclick="printTemas('sprint1')" id="btSpr1">Sprint 1</button>
-    <button type="submit" name="sprint2" onclick="printTemas('sprint2')" id="btSpr2">Sprint 2</button>
-    <button type="submit" name="sprint3" onclick="printTemas('sprint3')" id="btSpr3">Sprint 3</button>
+    <button type="submit" name="sprint1" id="btnSprint1">Sprint 1</button>
+    <button type="submit" name="sprint2" id="btnSprint2">Sprint 2</button>
+    <button type="submit" name="sprint3" id="btnSprint3">Sprint 3</button>
   </div>
   <section id="imprime">
-    <div id="sprint1">
+    <div class="hidden" id="divSprint1">
       <h2>Sprint 1: Introducción a Javascript</h2>
       <ol>
         <li>Fundamentos de Programación</li>
@@ -38,43 +38,48 @@
       </ol>
       <hr>
       <h2>Quiz</h2>
-      <h3>Existen dos tipos de funciones</h3>
-      <form>
-        <input type="radio">
-        <label >Expresadas y declaradas</label>
-        <br>
-        <input type="radio">
-        <label>Explicitas y declaradas</label>
-        <br>
-        <input type="radio">
-        <label for="a3">Expresadas y derivadas</label>
-        <br>
-      </form>
-      <h3>Elije una propiedad de los arreglos</h3>
-      <form >
-        <input type="radio" name="pregun 2" value="" >
-        <label>clear</label><br>
-        <input type="radio" name="pregun 2" value="">
-        <label>pop</label>
-        <br>
-        <input type="radio" name="pregun 2" value="">
-        <label>add</label><br>
-      </form>
+      <span id="resultQuiz1"></span>
+      <div id="pregQuiz1">
+        <h3>Existen dos tipos de funciones</h3>
+        <form>
+          <input type="radio" name="quiz1-opcA" id="q1opc-A1">
+          <label for="opcA1">Expresadas y declaradas</label>
+          <br>
+          <input type="radio" name="quiz1-opcA" id="q1opc-A2">
+          <label for="opcA2">Explicitas y declaradas</label>
+          <br>
+          <input type="radio" name="quiz1-opcA" id="q1opc-A3">
+          <label for="opcA3">Expresadas y derivadas</label>
+          <br>
+        </form>
+        <h3>Elije una propiedad de los arreglos</h3>
+        <form >
+          <input type="radio" name="quiz1-opcB" id="q1opc-B1">
+          <label for="opcB1">clear</label>
+          <br>
+          <input type="radio" name="quiz1-opcB" id="q1opc-B2">
+          <label for="opcB2">pop</label>
+          <br>
+          <input type="radio" name="quiz1-opcB" id="q1opc-B3">
+          <label for="opcB3">add</label>
+        </form>
 
-      <h3>Un objeto tiene _ _ _ _ _ _ _ _ y _ _ _ _ _ _ _ _</h3>
-      <form>
-        <input type="radio" name="pregun 3" value="">
-        <label >números y letras</label>
-        <br>
-        <input type="radio" name="pregun 3" value="">
-        <label >partes y validaciones</label>
-        <br>
-        <input type="radio" name="pregun 3" value="">
-        <label >propiedades y valorer>
-      </form>
+        <h3>Un objeto tiene _ _ _ _ _ _ _ _ y _ _ _ _ _ _ _ _</h3>
+        <form>
+          <input type="radio" name="quiz1-opcC" id="q1opc-C1">
+          <label for="opcC1">números y letras</label>
+          <br>
+          <input type="radio" name="quiz1-opcC" id="q1opc-C2">
+          <label for="opcC2">partes y validaciones</label>
+          <br>
+          <input type="radio" name="quiz1-opcC" id="q1opc-C3">
+          <label for="opcC3">propiedades y valorer</label>
+        </form>
 
-    </div>
-    <div id="sprint2">
+      </div>
+      </div>
+
+    <div id="divSprint2">
       <h2 id="sprints">Sprint 2: Introducción al desarrollo web y construcción de páginas web</h2>
       <ol id="temas">
         <li>Ciclo de vida del desarrollo web y arquitectura y arquitectura básica cliente/Servidor/Configuración del ambiente de trabajo e introducción a git.</li>
@@ -86,43 +91,47 @@
       </ol>
       <hr>
       <h2>Quiz</h2>
-      <h3 id="primQ">¿Cuál es el comando para iniciar un repositorio desde la consola?</h3>
-      <form>
-        <input type="radio" name="pregun 1" value="gitInit." id="a1">
-        <label for="a1" id="respA1">git init.</label>
-        <br>
-        <input type="radio" name="pregun 1" value="gitInit" id="a2">
-        <label for="a2" id="respA2">git init</label>
-        <br>
-        <input type="radio" name="pregun 1" value="gitInitadd" id="a3">
-        <label for="a3" id="respA3">git init add</label>
-        <br>
-      </form>
-      <h3 id="segQ">¿Cuál es la finalidad de hacer una prueba unitarias?</h3>
-      <form id="opciones">
-        <input type="radio" name="pregun 2" value="" id="b1">
-        <label for="b1" id="respB1">Comprobar que el código funciona correctamente</label><br>
-        <input type="radio" name="pregun 2" value="" id="b2">
-        <label for="b2" id="respB2">Darle valores a los parámetros de dichas funciones</label>
-        <br>
-        <input type="radio" name="pregun 2" value="" id="b3">
-        <label for="b3" id="respB3">No tiene ningún fin</label><br>
-      </form>
+      <span id="resultQuiz2"></span>
+      <div id="pregQuiz2">
+        <h3>¿Cuál es el comando para iniciar un repositorio desde la consola?</h3>
+        <form>
+          <input type="radio" name="quiz2-opcA" id="q2opc-A1">
+          <label for="a1" id="respA1">git init.</label>
+          <br>
+          <input type="radio" name="quiz2-opcA" id="q2opc-A2">
+          <label for="a2" id="respA2">git init</label>
+          <br>
+          <input type="radio" name="quiz2-opcA" id="q2Opc-A3">
+          <label for="a3" id="respA3">git init add</label>
+          <br>
+        </form>
+        <h3>¿Cuál es la finalidad de hacer una prueba unitarias?</h3>
+        <form id="opciones">
+          <input type="radio" name="quiz2-opcB" id="q2opc-B1">
+          <label for="q2opc-B1">Comprobar que el código funciona correctamente</label><br>
+          <input type="radio" name="quiz2-opcB" id="q2opc-B2">
+          <label for="q2opc-B2">Darle valores a los parámetros de dichas funciones</label>
+          <br>
+          <input type="radio" name="quiz2-opcB" id="q2opc-B3">
+          <label for="q2opc-B3">No tiene ningún fin</label>
+        </form>
 
-      <h3 id="terQ">¿Qué significa DOM?</h3>
-      <form>
-        <input type="radio" name="pregun 3" value="" id="c1">
-        <label for="c1" id="respC1">Dual Object Model</label>
-        <br>
-        <input type="radio" name="pregun 3" value="" id="c2">
-        <label for="c2" id="respC2">Document Object Model</label>
-        <br>
-        <input type="radio" name="pregun 3" value="" id="c3">
-        <label for="c3" id="respC3">Document Obsolet Model</label><br>
-      </form>
-    </div>
+        <h3>¿Qué significa DOM?</h3>
+        <form>
+          <input type="radio" name="quiz2-opcC" id="q2opc-C1">
+          <label for="q2opc-C1">Dual Object Model</label>
+          <br>
+          <input type="radio" name="quiz2-opcC" id="q2opc-C2">
+          <label for="q2opc-C2">Document Object Model</label>
+          <br>
+          <input type="radio" name="quiz2-opcC" id="q2opc-C3">
+          <label for="q2opc-C3">Document Obsolet Model</label>
+        </form>
+      </div>
 
-    <div id="sprint3">
+      </div>
+
+    <div class="hidden" id="divSprint3">
       <h3>Sprint 3</h3>
     </div>
     <br>
