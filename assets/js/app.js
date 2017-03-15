@@ -1,10 +1,8 @@
-//document.getElementById("btnSprint1").addEventListener("click", printTemas("sprint1"));
-//document.getElementById("btnSprint1").addEventListener("click", printTemas(sprint1));
 document.getElementById("btnSprint1").addEventListener("click", function(event){
   event.preventDefault();
   printTemas("divSprint1");
 });
-document.getElementById("btnSprint1").addEventListener("click", function(event){
+document.getElementById("btnSprint2").addEventListener("click", function(event){
   event.preventDefault();
   printTemas("divSprint2");
 });
