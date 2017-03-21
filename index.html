@@ -9,12 +9,12 @@
 </head>
 <body>
   <div class="dropdown">Hola Maria
-	<button onclick="myFunction()" class="dropbtn">&#9776;</button>
-	<div id="myDropdown" class="dropdown-content">
-		<a href="listaEst.html">Perfil</a>
-		<a href="salir.html">Salir</a>
-	</div>
-</div>
+    <button onclick="myFunction()" class="dropbtn">&#9776;</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="listaEst.html">Perfil</a>
+      <a href="salir.html">Salir</a>
+    </div>
+  </div>
   <div>
     <h1>¿Qué es laboratoria?</h1>
     <p>
@@ -42,42 +42,49 @@
       <div id="pregQuiz1">
         <h3>Existen dos tipos de funciones</h3>
         <form>
-          <input type="radio" name="quiz1-opcA" id="q1opc-A1">
+          <input type="radio" class="inpQuiz1" name="quiz1-opcA" id="q1opc-A1">
           <label for="opcA1">Expresadas y declaradas</label>
           <br>
-          <input type="radio" name="quiz1-opcA" id="q1opc-A2">
+          <input type="radio" class="inpQuiz1" name="quiz1-opcA" id="q1opc-A2">
           <label for="opcA2">Explicitas y declaradas</label>
           <br>
-          <input type="radio" name="quiz1-opcA" id="q1opc-A3">
+          <input type="radio" class="inpQuiz1" name="quiz1-opcA" id="q1opc-A3">
           <label for="opcA3">Expresadas y derivadas</label>
           <br>
+          <span id="spnSelectOptionQ1-A"></span>
         </form>
         <h3>Elije una propiedad de los arreglos</h3>
         <form >
-          <input type="radio" name="quiz1-opcB" id="q1opc-B1">
+          <input type="radio" value="clear" name="quiz1-opcB" id="q1opc-B1">
           <label for="opcB1">clear</label>
           <br>
-          <input type="radio" name="quiz1-opcB" id="q1opc-B2">
+          <input type="radio" value="pop" name="quiz1-opcB" id="q1opc-B2">
           <label for="opcB2">pop</label>
           <br>
-          <input type="radio" name="quiz1-opcB" id="q1opc-B3">
+          <input type="radio" value="add" name="quiz1-opcB" id="q1opc-B3">
           <label for="opcB3">add</label>
+          <br>
+          <span id="spnSelectOptionQ1-B"></span>
         </form>
 
         <h3>Un objeto tiene _ _ _ _ _ _ _ _ y _ _ _ _ _ _ _ _</h3>
         <form>
-          <input type="radio" name="quiz1-opcC" id="q1opc-C1">
+          <input type="radio"  value="números y letras" name="quiz1-opcC" id="q1opc-C1">
           <label for="opcC1">números y letras</label>
           <br>
-          <input type="radio" name="quiz1-opcC" id="q1opc-C2">
+          <input type="radio" value="partes y validaciones" name="quiz1-opcC" id="q1opc-C2">
           <label for="opcC2">partes y validaciones</label>
           <br>
-          <input type="radio" name="quiz1-opcC" id="q1opc-C3">
+          <input type="radio" value="propiedades y valores" name="quiz1-opcC" id="q1opc-C3">
           <label for="opcC3">propiedades y valorer</label>
+          <br>
+          <span id="spnSelectOptionQ1-C"></span>
         </form>
-
+        <div class="enviar">
+          <button type="submit" name="enviar" id="enviaQuiz1">Enviar</button>
+        </div>
       </div>
-      </div>
+    </div>
 
     <div id="divSprint2">
       <h2 id="sprints">Sprint 2: Introducción al desarrollo web y construcción de páginas web</h2>
@@ -95,15 +102,16 @@
       <div id="pregQuiz2">
         <h3>¿Cuál es el comando para iniciar un repositorio desde la consola?</h3>
         <form>
-          <input type="radio" name="quiz2-opcA" id="q2opc-A1">
+          <input type="radio" class="inpQuiz2" name="quiz2-opcA" id="q2opc-A1">
           <label for="a1" id="respA1">git init.</label>
           <br>
-          <input type="radio" name="quiz2-opcA" id="q2opc-A2">
+          <input type="radio" class="inpQuiz2" name="quiz2-opcA" id="q2opc-A2">
           <label for="a2" id="respA2">git init</label>
           <br>
-          <input type="radio" name="quiz2-opcA" id="q2Opc-A3">
+          <input type="radio" class="inpQuiz2" name="quiz2-opcA" id="q2Opc-A3">
           <label for="a3" id="respA3">git init add</label>
           <br>
+          <span id="spnSelectOptionQ2-A"></span>
         </form>
         <h3>¿Cuál es la finalidad de hacer una prueba unitarias?</h3>
         <form id="opciones">
@@ -127,16 +135,19 @@
           <input type="radio" name="quiz2-opcC" id="q2opc-C3">
           <label for="q2opc-C3">Document Obsolet Model</label>
         </form>
+        <div class="enviar">
+          <button type="submit" name="enviar" id="enviaQuiz2">Enviar</button>
+        </div>
       </div>
 
-      </div>
+    </div>
 
     <div class="hidden" id="divSprint3">
       <h3>Sprint 3</h3>
-    </div>
-    <br>
-    <div class="enviar">
-      <button type="submit" name="enviar">Enviar</button>
+      <br>
+      <div class="enviar">
+        <button type="submit" name="enviar" id="enviaQuiz3">Enviar</button>
+      </div>
     </div>
   </section>
   <script type="text/javascript" src="assets/js/app.js"></script>
