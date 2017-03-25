@@ -23,7 +23,7 @@ function Capitan(){
     }
   }
 
-  this.quizSolution = function(classNameInput, classNameSpan, idQuizContainer){
+  this.quizSolution = function(classNameInput, idQuizContainer){
     var options = document.getElementsByClassName(classNameInput);
     var countChecked = 0;
     var countCorrectOption = 0;
@@ -36,15 +36,27 @@ function Capitan(){
         console.log(countChecked);
       }
     }
-    if(countChecked == 3){
-      alert("tres");
-      (options[0].checked)? (countCorrectOption++):"";
-      (options[4].checked)? countCorrectOption++:"";
-      (options[8].checked)? countCorrectOption++:"";
-      console.log(countCorrectOption);
-      record.innerHTML = "Otbuviste " + countCorrectOption + " respuestas correctas.";
-    }else{
-      alert("Todas las preguntas som obligtorias");
+    if(idQuizContainer == "pregQuiz1"){
+      if(countChecked == 3){
+        (options[0].checked)? (countCorrectOption++):"";
+        (options[4].checked)? countCorrectOption++:"";
+        (options[8].checked)? countCorrectOption++:"";
+        console.log(countCorrectOption);
+        record.innerHTML = "Otbuviste " + countCorrectOption + " respuestas correctas.";
+      }else{
+        alert("Todas las preguntas som obligtorias");
+      }
+    }else if(idQuizContainer == "pregQuiz2"){
+      if(countChecked == 3){
+        alert("tres");
+        (options[1].checked)? (countCorrectOption++):"";
+        (options[3].checked)? countCorrectOption++:"";
+        (options[7].checked)? countCorrectOption++:"";
+        console.log(countCorrectOption);
+        record.innerHTML = "Otbuviste " + countCorrectOption + " respuestas correctas.";
+      }else{
+        alert("Todas las preguntas som obligtorias");
+      }
     }
 
   }
@@ -75,7 +87,12 @@ window.addEventListener("load", function(){
 
   document.getElementById("enviaQuiz1").addEventListener("click", function(event){
     event.preventDefault();
-    elCapitan.quizSolution("inpQuiz1", "error", "pregQuiz1");
+    elCapitan.quizSolution("inpQuiz1", "pregQuiz1");
+  });
+
+  document.getElementById("enviaQuiz2").addEventListener("click", function(event){
+    event.preventDefault();
+    elCapitan.quizSolution("inpQuiz2", "pregQuiz2")
   });
 });
 
