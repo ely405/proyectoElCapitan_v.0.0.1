@@ -44,7 +44,7 @@ function Capitan(){
         console.log(countCorrectOption);
         record.innerHTML = "Otbuviste " + countCorrectOption + " respuestas correctas.";
       }else{
-        alert("Todas las preguntas som obligtorias");
+        alert("Todas las preguntas son obligtorias");
       }
     }else if(idQuizContainer == "pregQuiz2"){
       if(countChecked == 3){
@@ -55,19 +55,10 @@ function Capitan(){
         console.log(countCorrectOption);
         record.innerHTML = "Otbuviste " + countCorrectOption + " respuestas correctas.";
       }else{
-        alert("Todas las preguntas som obligtorias");
+        alert("Todas las preguntas son obligtorias");
       }
     }
-
   }
-
-  this.solutionQuiz1 = function(name, iCorrect){
-    var options = document.getElementsByName(name);
-    if(options.checked[iCorrect]){
-      this.countChecked ++
-    }
-  }
-
 }
 
 window.addEventListener("load", function(){
