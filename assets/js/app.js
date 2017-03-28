@@ -58,16 +58,7 @@ function Capitan(){
         alert("Todas las preguntas som obligtorias");
       }
     }
-
   }
-
-  this.solutionQuiz1 = function(name, iCorrect){
-    var options = document.getElementsByName(name);
-    if(options.checked[iCorrect]){
-      this.countChecked ++
-    }
-  }
-
 }
 
 window.addEventListener("load", function(){
