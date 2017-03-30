@@ -17,25 +17,21 @@ var arrayStudents = [
                       new Student("Michelle", "Seguil", "5ta promoción", "Trabajando")
                     ];
 console.log(arrayStudents);
-var containerStudentsData = document.getElementById("sctnPrintStudentDataList");
-//window.addEvenListener("load", function(){
-  arrayStudents.forEach(function(e){
-    console.log(e);
-    var text =[];
-    var paragraph;
-    for (var prop in e) {
-      text.push(prop + " " + e[prop]);
-      console.log(text);
-      text.forEach(function(elem){
-        paragraph = document.createElement("P");
-        var paragraphContent = document.createTextNode(elem);
-        console.log(elem);
-        console.log(paragraphContent);
-        paragraph.appendChild(paragraphContent);
-      });
+
+function createDiv(){
+  var containerStudentsData = document.getElementById("sctnPrintStudentDataList");
+
+  arrayStudents.forEach(function(elem){
+    var containerStudent = document.createElement("DIV");
+    containerStudent.classList.add("studentDiv");
+    for(var prop in elem){
+      var paragraph = document.createElement("P");
+      var paragraphContent = document.createTextNode(prop +": " + elem[prop]);
+      paragraph.appendChild(paragraphContent);
+      containerStudent.appendChild(paragraph);
     }
-    var div = document.createElement("DIV")
-    div.appendChild(paragraph);
-    containerStudentsData.appendChild(div);
-  });
-// });
+    containerStudentsData.appendChild(containerStudent);
+  })
+}
+
+window.addEventListener("load", createDiv);

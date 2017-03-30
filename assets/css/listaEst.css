@@ -1,0 +1,15 @@
+
+section{
+  display: flex;
+}
+.studentDiv{
+  background-color: orange;
+  width: 270px;
+  padding: 2px 15px;
+  margin: 10px;
+}
+
+div p{
+  margin: : 3px;
+  width: 290px;
+}
